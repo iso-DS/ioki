@@ -10,7 +10,7 @@ st.set_page_config(page_title="Analyse IOKI", layout="wide")
 
 # Chargement des données
 url = 'https://raw.githubusercontent.com/iso-DS/ioki/blob/main/DATA/006_20250131T105453.csv'
-pd.read_csv(StringIO(url)
+pd.read_csv(url)
 
     st.error("Failed to load data from GitHub.")
 
