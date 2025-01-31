@@ -9,7 +9,7 @@ from io import StringIO
 st.set_page_config(page_title="Analyse IOKI", layout="wide")
 
 # Chargement des données
-url = 'https://raw.githubusercontent.com/iso-DS/DATA/006_20250131T105453.csv'
+url = 'https://raw.githubusercontent.com/iso-DS/ioki/blob/main/DATA/006_20250131T105453.csv'
 response = requests.get(url)
 if response.status_code == 200:
     pd.read_csv(StringIO(response.text))
