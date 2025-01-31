@@ -7,7 +7,7 @@ import numpy as np  # Import numpy for calculations
 st.set_page_config(page_title="Analyse IOKI", layout="wide")
 
 # Chargement des données
-df = pd.read_csv("DATA/006_20250131T105453.csv", sep=",")
+df = pd.read_csv("https://github.com/iso-DS/ioki/blob/main/DATA/006_20250131T105453.csv", sep=",")
 df["Timestamp"] = pd.to_datetime(df["Timestamp"])
 
 # Calculer les moyennes pour chaque ligne
