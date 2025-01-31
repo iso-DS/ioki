@@ -7,8 +7,7 @@ import numpy as np  # Import numpy for calculations
 st.set_page_config(page_title="Analyse IOKI", layout="wide")
 
 # Chargement des données
-#url = "DATA/006_20250131T105453.csv"
-url="https://github.com/iso-DS/ioki/blob/main/DATA/006_20250131T105453.CSV"
+url = "https://raw.githubusercontent.com/iso-DS/ioki/main/DATA/006_20250131T105453.csv"
 
 # Load the CSV file directly from the raw URL
 df = pd.read_csv(url, sep=",")
