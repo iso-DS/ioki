@@ -10,7 +10,7 @@ st.set_page_config(page_title="Analyse IOKI", layout="wide")
 url = "https://github.com/iso-DS/ioki/blob/main/DATA/006_20250131T105453.CSV"
 
 # Load the CSV file directly from the raw URL
-df = pd.read_csv(url)
+df = pd.read_csv(url,sep=",")
 
 df["Timestamp"] = pd.to_datetime(df["Timestamp"])
 
