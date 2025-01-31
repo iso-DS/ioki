@@ -2,11 +2,20 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 import numpy as np  # Import numpy for calculations
+import requests
+from io import StringIO
 
 # Configuration de la page Streamlit
 st.set_page_config(page_title="Analyse IOKI", layout="wide")
 
 # Chargement des données
+url = 'https://raw.githubusercontent.com/iso-DS/DATA/006_20250131T105453.csv'
+response = requests.get(url)
+if response.status_code == 200:
+    pd.read_csv(StringIO(response.text))
+else:
+    st.error("Failed to load data from GitHub.")
+
 url = "https://raw.githubusercontent.com/iso-DS/ioki/main/DATA/006_20250131T105453.csv"
 
 # Load the CSV file directly from the raw URL
