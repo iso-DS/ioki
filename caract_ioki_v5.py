@@ -9,8 +9,13 @@ from io import StringIO
 st.set_page_config(page_title="Analyse IOKI", layout="wide")
 
 # Chargement des données
-url = r'C:\Users\total\PROJET_1_DOUNIA\DATA\006_20250131T105453.csv'
-pd.read_csv(url)
+@st.cache_data
+def load_data():
+        df=pd.read_csv(file)
+    return df
+
+file = '.\DATA\006_20250131T105453.csv'
+df=load_data()
 
 df["Timestamp"] = pd.to_datetime(df["Timestamp"])
 
