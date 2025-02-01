@@ -13,7 +13,7 @@ st.set_page_config(page_title="Analyse IOKI", layout="wide")
 st.write("📂 Liste des fichiers dans `DATA/` :")
 st.write(os.listdir("DATA/"))
 
-file = "DATA/006_20250131T105453.csv"
+file = "DATA/006_20250131T105453.CSV"
 if not os.path.exists(file):
     st.error(f"❌ Le fichier `{file}` n'existe pas. Vérifiez son emplacement !")
 else:
