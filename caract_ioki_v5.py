@@ -9,9 +9,9 @@ import os
 st.set_page_config(page_title="Analyse IOKI", layout="wide")
 
 
-#Check fichier
-st.write("📂 Liste des fichiers dans `DATA/` :")
-st.write(os.listdir("DATA/"))
+#Check fichier : ATTENTION A LA CASE de l' extension Maj ou Miniscule
+#st.write("📂 Liste des fichiers dans `DATA/` :")
+#st.write(os.listdir("DATA/"))
 
 file = "DATA/006_20250131T105453.CSV"
 if not os.path.exists(file):
