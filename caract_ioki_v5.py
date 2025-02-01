@@ -1,4 +1,4 @@
-import streamlit as st
+iimport streamlit as st
 import plotly.express as px
 import pandas as pd
 import numpy as np  # Import numpy for calculations
@@ -17,7 +17,7 @@ file = "DATA/006_20250131T105453.CSV"
 if not os.path.exists(file):
     st.error(f"❌ Le fichier `{file}` n'existe pas. Vérifiez son emplacement !")
 else:
-    st.success(f"✅ Fichier `{file}` trouvé ! Chargement en cours...")
+    st.success(f"✅ Chemin Fichier `{file}` trouvé ! En cours...")
     df = pd.read_csv(file)
 
 # Function to load data
