@@ -3,9 +3,19 @@ import plotly.express as px
 import pandas as pd
 import numpy as np  # Import numpy for calculations
 from io import StringIO
+import os
 
 # Configuration de la page Streamlit
 st.set_page_config(page_title="Analyse IOKI", layout="wide")
+
+
+#Check fichier
+file = "DATA/006_20250131T105453.csv"
+if not os.path.exists(file):
+    st.error(f"❌ Le fichier `{file}` n'existe pas. Vérifiez son emplacement !")
+else:
+    st.success(f"✅ Fichier `{file}` trouvé ! Chargement en cours...")
+    df = pd.read_csv(file)
 
 # Function to load data
 @st.cache_data
