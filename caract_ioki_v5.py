@@ -28,7 +28,7 @@ def load_data(file):
 
 # Allow user to upload a file
 uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
-file = r'./DATA/006_20250131T105453.csv'  # Ensure correct file path
+file = r'./DATA/006_20250131T105453.CSV'  # Ensure correct file path
 
 # Load dataset
 if uploaded_file is not None:
